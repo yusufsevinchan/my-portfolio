@@ -1,0 +1,35 @@
+body {
+    background-color: cornflowerblue;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 60%;
+    margin-inline: 20%;
+}
+
+main {
+    border-radius: 20px;
+    margin-inline: 30px;
+    padding: 10px;
+}
+
+.job-card {
+    background-color: white;
+    color: #333;
+    text-align: justify;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.job-card li {
+    list-style-type: circle;
+}

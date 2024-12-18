@@ -1,0 +1,102 @@
+body {
+    background-color: darkslateblue;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+p {
+    font-size: large;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    font-size: large;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+th {
+    background-color: lightgreen;
+    font-size: large;
+}
+
+tr {
+    background-color: lightskyblue;
+}
+
+tr:hover {
+    background-color: blueviolet;
+}
+
+a {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    cursor: alias;
+}
+
+
+/* Classes */
+.profile {
+    /* Sağ üstte sabit konum */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px double skyblue;
+}
+
+.programming-languages li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.programming-languages li img {
+    width: 90px;
+    height: 90px;
+}
+
+.hobbies {
+    list-style-type: square;
+    font-size: large;
+}
+
+.social-links {
+    margin-bottom: 50px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.social-links i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}

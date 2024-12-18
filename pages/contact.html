@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yusuf Sevinçhan iletişim sayfası. Bana mesaj veya geri bildirim gönderin.">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+
+<body>
+    <header>
+        <h1>İletişim Bilgilerim</h1>
+    </header>
+    <main>
+        <section class="contact-info">
+            <p><b>Mail:</b>
+                <a href="mailto:yusuf.sevinchan.dev@gmail.com">
+                    yusuf.sevinchan.dev@gmail.com
+                </a>
+            </p>
+            <p><b>Linkedin:</b>
+                <a href="https://www.linkedin.com/in/yusuf-sevinchan" target="_blank">
+                    Yusuf Sevinçhan
+                </a>
+        </section>
+        <section id="suggestion-section">
+            <!-- İletişim Formu -->
+            <form name="contact" method="POST" class="contact-form" data-netlify="true">
+                <h2>Bana iletmek istediğiniz nedir:</h2>
+                <input type="text" name="name" id="name" placeholder="Adınız" required>
+                <input type="email" name="email" id="email" placeholder="E-posta Adresiniz" required>
+                <textarea name="message" id="message" rows="13" placeholder="Mesajınız" required></textarea>
+                <button type="submit">Gönder</button>
+                <button type="reset">Temizle</button>
+            </form>
+
+            <!-- Geri Bildirim Formu -->
+            <form name="feedback" method="POST" class="feedback-form" data-netlify="true">
+                <h2>Geri bildirim Formu</h2>
+                <div id="range-container" class="range-container">
+                    <label for="range">Websiteme 10 üzerinden kaç puan veriyorsunuz:</label><br><br>
+                    <input type="range" name="range" id="range" min="0" max="10" step="1" value="5" required><br><br>
+                    <div id="rangeValue" class="range-value">5</div>
+                </div>
+                <div id="like-web-pages">
+                    <h3>Hangi sayfaları beğendiniz:</h3>
+                    <input type="checkbox" name="liked-pages[]" id="home-like" value="home">
+                    <label for="home-like">Anasayfa</label>
+                    <input type="checkbox" name="liked-pages[]" id="about-like" value="about">
+                    <label for="about-like">Hakkımda</label>
+                    <input type="checkbox" name="liked-pages[]" id="experience-like" value="experience">
+                    <label for="experience-like">İş Deneyimi</label>
+                    <input type="checkbox" name="liked-pages[]" id="projects-like" value="projects">
+                    <label for="projects-like">Projelerim</label>
+                    <input type="checkbox" name="liked-pages[]" id="contact-like" value="contact">
+                    <label for="contact-like">İletişim</label>
+                </div>
+                <hr>
+                <div id="dislike-web-pages">
+                    <h3>Hangi sayfaları beğenmediniz:</h3>
+                    <input type="checkbox" name="disliked-pages[][]" id="home-dislike" value="home">
+                    <label for="home-dislike">Anasayfa</label>
+                    <input type="checkbox" name="disliked-pages[]" id="about-dislike" value="about">
+                    <label for="about-dislike">Hakkımda</label>
+                    <input type="checkbox" name="disliked-pages[]" id="experience-dislike" value="experience">
+                    <label for="experience-dislike">İş Deneyimi</label>
+                    <input type="checkbox" name="disliked-pages[]" id="projects-dislike" value="projects">
+                    <label for="projects-dislike">Projelerim</label>
+                    <input type="checkbox" name="disliked-pages[]" id="contact-dislike" value="contact">
+                    <label for="contact-dislike">İletişim</label>
+                </div><br>
+                <label for="comment">Yorumunuz:</label><br>
+                <textarea name="comment" id="comment" rows="5"
+                    placeholder="Şu Sayfanın şurası güzel olmuş ama şurası eksik olmuş."></textarea><br>
+                <label for="ad">Son olarak kim olarak bu puanı veriyorsunuz:</label>
+                <input type="text" name="ad" id="ad" placeholder="Adınız" required><br>
+
+                <button type="submit">Gönder</button>
+                <button type="reset">Temizle</button>
+            </form>
+        </section>
+        <section id="address-section">
+            <div style="text-align: center;">
+                <p><b>Adres:</b>
+                    İstanbul Üniversitesi-Cerrahpaşa Teknik Bilimler Meslek Yüksek Okulu Alkent 2000 Mahallesi Yiğittürk
+                    Caddesi No:5/9/1 Büyükçekmece Yerleşkesi KLM Binası Büyükçekmece/İstanbul
+                </p>
+            </div>
+            <section class="location">
+                <h2>Üniversite Konum</h2>
+                <!-- Loading lazy kullanıldığında iframe ögesi sayfa yüklenirken yüklenir. -->
+                <iframe loading="lazy"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZfgZpQBZtRQRFZJtOL9blag&key=AIzaSyDPz5n2YW41nc-N36s2eJ8Rf5vobe0OdIo">
+                </iframe>
+            </section>
+        </section>
+    </main>
+    <script src="../assets/js/contact.js" defer></script>
+    <script src="../assets/js/footer.js" defer></script>
+</body>
+
+</html>

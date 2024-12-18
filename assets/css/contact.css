@@ -1,0 +1,156 @@
+body {
+    background-color: lightsteelblue;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+.contact-info a {
+    color: teal;
+    cursor: alias;
+}
+
+.contact-info a:hover {
+    color: tomato;
+}
+
+#suggestion-section {
+    display: flex;
+    justify-content: space-around;
+    border: 4px dotted teal;
+    padding: 20px;
+    border-radius: 10px;
+    margin-inline: 10px;
+}
+
+.contact-form {
+    border-style: solid double groove double;
+}
+
+.feedback-form {
+    border-style: groove double solid double;
+}
+
+form {
+    border: 5px solid blueviolet;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 30px;
+    width: 500px;
+    height: auto;
+}
+
+form label {
+    width: 100%;
+    font-size: medium;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    font-size: medium;
+    line-height: 2;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+form input[type="range"] {
+    width: 100%;
+    height: 18px;
+    margin-top: 20px;
+}
+
+form h3 {
+    margin-top:0;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: lightblue;
+    font-size: large;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: lightskyblue;
+}
+
+#address-section {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.range-container {
+    position: relative;
+}
+
+.range-value {
+    position: absolute;
+    top: 22px;
+    transform: translateX(-50%);
+    background-color: lightblue;
+    padding: 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.location {
+    text-align: center;
+    margin-inline: 50px;
+    padding: 0 10px 10px 10px;
+    border: 2px black;
+    border-style: dashed dashed none dashed;
+}
+
+.location h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.location iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #suggestion-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    form {
+        width: 95%;
+    }
+}
