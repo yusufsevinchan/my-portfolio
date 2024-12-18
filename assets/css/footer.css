@@ -15,7 +15,7 @@ footer {
 
 .footer-nav a:not(:last-child)::after {
     content: "\\|/";
-    color: green;
+    color: white;
     margin: 0 10px;
 }
 
