@@ -47,14 +47,6 @@ tr:hover {
     background-color: blueviolet;
 }
 
-a {
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    text-decoration: none;
-    cursor: alias;
-}
-
-
 /* Classes */
 .profile {
     /* Sağ üstte sabit konum */
@@ -92,8 +84,11 @@ a {
 
 .social-links a {
     color: white;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     font-weight: 600;
+    text-decoration: none;
+    cursor: alias;
 }
 
 .social-links i {

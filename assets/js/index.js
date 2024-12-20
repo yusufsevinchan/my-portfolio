@@ -1,14 +1,14 @@
-// Tam ekran modunu açar ve kapatır
+// Tam ekran modunu açar ve kapatır 
 function openFullscreen() {
   const gameFrame = document.getElementById("game-container");
   if (!document.fullscreenElement) {
     if (gameFrame.requestFullscreen) {
       gameFrame.requestFullscreen();
-    } else if (gameFrame.mozRequestFullScreen) {
+    } else if (gameFrame.mozRequestFullScreen) { // Firefox
       gameFrame.mozRequestFullScreen();
-    } else if (gameFrame.webkitRequestFullscreen) {
+    } else if (gameFrame.webkitRequestFullscreen) { // Chrome, Safari, Opera
       gameFrame.webkitRequestFullscreen();
-    } else if (gameFrame.msRequestFullscreen) {
+    } else if (gameFrame.msRequestFullscreen) { // Internet Explorer/Edge
       gameFrame.msRequestFullscreen();
     }
   } else {

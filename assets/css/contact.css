@@ -2,7 +2,6 @@ body {
     background-color: lightsteelblue;
     font-family: 'Roboto', sans-serif;
     margin: 20px;
-    align-items: center;
 }
 
 header {
@@ -113,7 +112,7 @@ form button:hover {
 .range-value {
     position: absolute;
     top: 22px;
-    transform: translateX(-50%);
+    transform: translateX(-40%);
     background-color: lightblue;
     padding: 8px;
     border-radius: 8px;
