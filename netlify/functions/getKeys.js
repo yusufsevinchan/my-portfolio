@@ -14,13 +14,8 @@ export const handler = async (event) => {
           "Access-Control-Allow-Origin": origin,
           "Access-Control-Allow-Methods": "GET, OPTIONS",
           "Access-Control-Allow-Headers": "Content-Type",
-      },
+        },
         body: JSON.stringify({ message: "CORS başarılı" }),
-      };
-    } else {
-      return {
-        statusCode: 403,
-        body: JSON.stringify({ message: "Cors başarısız" }),
       };
     }
   }
@@ -56,7 +51,6 @@ export const handler = async (event) => {
   return {
     statusCode: 200,
     headers: {
-      message: "API Keys erişimi başarılı",
       "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
