@@ -1,6 +1,8 @@
 export const handler = async (event) => {
   // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
-  const allowedOrigins = ["chrome-extension://gmpkpoccbompnndpfkijbcpgjaenekla"];
+  const allowedOrigins = [
+    "chrome-extension://gmpkpoccbompnndpfkijbcpgjaenekla",
+  ];
   const origin = event.headers.origin;
 
   // OPTIONS request ise CORS kontrolü yapma
@@ -15,8 +17,7 @@ export const handler = async (event) => {
         },
         body: JSON.stringify({ message: "CORS başarılı" }),
       };
-    }
-    else {
+    } else {
       return {
         statusCode: 403,
         body: JSON.stringify({ message: "Cors başarısız" }),
@@ -38,6 +39,17 @@ export const handler = async (event) => {
     LOCATIONIQ_API_KEY: process.env.LOCATIONIQ_API_KEY,
     OPENWEATHERMAP_API_KEY: process.env.OPENWEATHERMAP_API_KEY,
   };
+
+  if (
+    !keys.GEOAPIFY_API_KEY ||
+    !keys.LOCATIONIQ_API_KEY ||
+    !keys.OPENWEATHERMAP_API_KEY
+  ) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: "API key bulunamadı" }),
+    };
+  }
 
   return {
     statusCode: 200,
