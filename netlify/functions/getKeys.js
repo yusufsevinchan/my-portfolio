@@ -1,24 +1,36 @@
 export const handler = async (event) => {
-  // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
-  const allowedOrigins = ["chrome-extension://gmpkpoccbompnndpfkijbcpgjaenekla"];
-  const origin = event.headers.origin;
+    console.log("Event received:", event);
 
-  if (!allowedOrigins.includes(origin)) {
-    return {
-      statusCode: 403,
-      body: JSON.stringify({ message: "Erişim engellendi" }),
+    // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
+    const allowedOrigins = ["chrome-extension://gmpkpoccbompnndpfkijbcpgjaenekla"];
+    const origin = event.headers.origin;
+
+    console.log("Origin:", origin);
+
+    if (!allowedOrigins.includes(origin)) {
+        console.log("Origin not allowed:", origin);
+        return {
+            statusCode: 403,
+            body: JSON.stringify({ message: "Erişim engellendi" }),
+        };
+    }
+
+    // CORS kontrolü başarılı ise, keyleri döndür
+    const keys = {
+        GEOAPIFY_API_KEY: process.env.GEOAPIFY_API_KEY,
+        LOCATIONIQ_API_KEY: process.env.LOCATIONIQ_API_KEY,
+        OPENWEATHERMAP_API_KEY: process.env.OPENWEATHERMAP_API_KEY,
     };
-  }
 
-  // CORS kontrolü başarılı ise, keyleri döndür
-  const keys = {
-    geoapifyApiKey: process.env.GEOAPIFY_API_KEY,
-    locationiqApiKey: process.env.LOCATIONIQ_API_KEY,
-    openWeatherApiKey: process.env.OPENWEATHERMAP_API_KEY,
-  };
+    console.log("Keys:", keys);
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify(keys),
-  };
+    return {
+        statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Origin": origin,
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+        },
+        body: JSON.stringify(keys),
+    };
 };
