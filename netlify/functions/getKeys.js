@@ -1,6 +1,6 @@
 export const handler = async (event) => {
   // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
-  const allowedOrigins = ["chrome-extension:/gmpkpoccbompnndpfkijbcpgjaenekla"];
+  const allowedOrigins = ["chrome-extension://gmpkpoccbompnndpfkijbcpgjaenekla"];
   const origin = event.headers.origin;
 
   if (!allowedOrigins.includes(origin)) {
