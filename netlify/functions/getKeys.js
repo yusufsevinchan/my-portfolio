@@ -29,7 +29,9 @@ export const handler = async (event) => {
   if (!allowedOrigins.includes(origin)) {
     return {
       statusCode: 403,
-      body: JSON.stringify({ message: "Erişim engellendi" }),
+      body: JSON.stringify({
+        error: "Erişim engellendi: Origin izinli değil.",
+      }),
     };
   }
 
@@ -54,6 +56,7 @@ export const handler = async (event) => {
   return {
     statusCode: 200,
     headers: {
+      message: "API Keys erişimi başarılı",
       "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
