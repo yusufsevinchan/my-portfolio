@@ -14,7 +14,7 @@ export const handler = async (event) => {
           "Access-Control-Allow-Origin": origin,
           "Access-Control-Allow-Methods": "GET, OPTIONS",
           "Access-Control-Allow-Headers": "Content-Type",
-        },
+      },
         body: JSON.stringify({ message: "CORS başarılı" }),
       };
     } else {
