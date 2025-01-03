@@ -2,6 +2,7 @@ export const handler = async (event) => {
   // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
   const allowedOrigins = [
     "chrome-extension://gmpkpoccbompnndpfkijbcpgjaenekla",
+    "https://addons.mozilla.org/tr/firefox/addon/güncel-hava-durumu-kolay-hızlı/"
   ];
   const origin = event.headers.origin;
 
