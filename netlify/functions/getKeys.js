@@ -9,7 +9,10 @@ export const handler = async (event) => {
 
   // OPTIONS request ise CORS kontrolü yapma
   if (event.httpMethod === "OPTIONS") {
-    if (allowedOrigins.includes(origin)) {
+    if (
+      allowedOrigins.includes(origin) &&
+      origin.startsWith("chrome-extension://")
+    ) {
       return {
         statusCode: 200,
         headers: {
