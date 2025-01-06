@@ -1,7 +1,6 @@
 export const handler = async (event) => {
   // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
   const allowedOrigins = [
-    "chrome-extension://bheigodibhkolegjfocchbndmniaofog",
     "chrome-extension://dpnppkohaamjanddepocpipmjmlmobbp",
     "moz-extension://a6a6cbb7-d4fe-4a97-98f8-3dba534db98e",
   ];
@@ -10,8 +9,9 @@ export const handler = async (event) => {
   // OPTIONS request ise CORS kontrolü yapma
   if (event.httpMethod === "OPTIONS") {
     if (
-      allowedOrigins.includes(origin) &&
-      origin.startsWith("chrome-extension://")
+      allowedOrigins.includes(origin) ||
+      allowedOrigins.includes("chrome-extension://") ||
+      allowedOrigins.includes("moz-extension://")
     ) {
       return {
         statusCode: 200,
@@ -77,7 +77,7 @@ export const handler = async (event) => {
     return {
       statusCode: 500,
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": origin,
       },
       body: JSON.stringify({ message: error.message }),
     };
