@@ -1,78 +1,92 @@
 <!DOCTYPE html>
 <html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kişisel web sitem. Hakkımda, iş deneyimi, projelerim ve iletişim sayfalarım burada."
+    />
+    <meta
+      name="keywords"
+      content="web geliştirme, yazılım, projeler, iş deneyimi, iletişim"
+    />
+    <meta name="author" content="Yusuf Sevinçhan" />
+    <title>My WEB Site</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Kişisel web sitem. Hakkımda, iş deneyimi, projelerim ve iletişim sayfalarım burada.">
-  <meta name="keywords" content="web geliştirme, yazılım, projeler, iş deneyimi, iletişim">
-  <meta name="author" content="Yusuf Sevinçhan">
-  <title>My WEB Site</title>
-  <link rel="stylesheet" href="./assets/css/index.css" />
-</head>
-
-<body>
-  <header>
-    <h1>Web siteme Hoşgeldiniz!</h1>
-  </header>
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <h2>Merhaba, Ben Yusuf Sevinçhan</h2>
-      <p><b>Web geliştirme ve yazılım konularında çalışmalar yapıyorum. Bu sitemde hakkımda, iş deneyimim, projelerim ve
-          iletişim bilgilerim bulunmaktadır.</b></p>
-    </section>
-    <!-- Navigation -->
-    <nav>
-      <ol>
-        <a href="./pages/about.html">
-          <li>Hakkımda</li>
-        </a>
-        <a href="./pages/experience.html">
-          <li>İş Deneyimi</li>
-        </a>
-        <a href="./pages/projects.html">
-          <li>Projelerim</li>
-        </a>
-        <a href="./pages/contact.html">
-          <li>İletişim</li>
-        </a>
-      </ol>
-    </nav>
-    <!-- My Game from scratch -->
-    <section class="game-section">
-      <h1>Mouse Escape Oyunu</h1>
-      <div id="game-container">
-        <div id="game-loader">
-          <h1>Oyun Yükleniyor...</h1>
+  <body>
+    <header>
+      <h1>Web siteme Hoşgeldiniz!</h1>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h2>Merhaba, Ben Yusuf Sevinçhan</h2>
+        <p>
+          <b
+            >Web geliştirme ve yazılım konularında çalışmalar yapıyorum. Bu
+            sitemde hakkımda, iş deneyimim, projelerim ve iletişim bilgilerim
+            bulunmaktadır.</b
+          >
+        </p>
+      </section>
+      <!-- Navigation -->
+      <nav>
+        <ol>
+          <a href="./pages/about.html">
+            <li>Hakkımda</li>
+          </a>
+          <a href="./pages/experience.html">
+            <li>İş Deneyimi</li>
+          </a>
+          <a href="./pages/projects.html">
+            <li>Projelerim</li>
+          </a>
+          <a href="./pages/contact.html">
+            <li>İletişim</li>
+          </a>
+        </ol>
+      </nav>
+      <!-- My Game from scratch -->
+      <section class="game-section">
+        <h1>Mouse Escape Oyunu</h1>
+        <div id="game-container">
+          <button id="play-button">Başlat</button>
+          <button id="fullscreen-button">Tam Ekran Yap</button>
+          <iframe
+            id="game-frame"
+            src=""
+            allowtransparency="true"
+            scrolling="no"
+            allowfullscreen
+          ></iframe>
         </div>
-        <button onclick="openFullscreen()">
-          Tam Ekran
-        </button>
-        <iframe src="https://scratch.mit.edu/projects/1027995806/embed" allowtransparency="true" scrolling="no"
-          allowfullscreen onload="hideLoader()" onerror="showError()"></iframe>
-      </div>
-      <div class="game-instructions">
-        <h3>Nasıl Oynanır?</h3>
-        <p>
-          Oyuna başlamak için ekranın üst kısmındaki <strong>"Yeşil Bayrak"</strong> butonuna tıklayın. Oyunu
-          durdurmak için ise
-          <strong>"Kırmızı Bayrak"</strong> butonuna tıklayabilirsiniz.
-        </p>
-        <p>
-          <strong>Hedef:</strong> Farenizi yön tuşlarıyla hareket ettirerek yiyecekleri toplayın ve kediden kaçının!
-          Topladığınız her yiyecek, puanınızı artırır. <strong>100 puana ulaşarak</strong> oyunu kazanın.
-        </p>
-        <p>
-          Ancak dikkatli olun! Eğer kediye yakalanırsanız oyun sona erer. Stratejinizi iyi belirleyin, hızlı olun ve
-          en önemlisi eğlenin!
-        </p>
-        <p><em>İyi eğlenceler!</em></p>
-      </div>
-    </section>
-  </main>
+        <div class="game-instructions">
+          <h3>Nasıl Oynanır?</h3>
+          <p>
+            Oyuna başlamak için ekranın üst kısmındaki
+            <strong>"Yeşil Bayrak"</strong> butonuna tıklayın. Oyunu durdurmak
+            için ise <strong>"Kırmızı Bayrak"</strong> butonuna
+            tıklayabilirsiniz.
+          </p>
+          <p>
+            <strong>Hedef:</strong> Farenizi yön tuşlarıyla hareket ettirerek
+            yiyecekleri toplayın ve kediden kaçının! Topladığınız her yiyecek,
+            puanınızı artırır. <strong>100 puana ulaşarak</strong> oyunu
+            kazanın.
+          </p>
+          <p>
+            Ancak dikkatli olun! Eğer kediye yakalanırsanız oyun sona erer.
+            Stratejinizi iyi belirleyin, hızlı olun ve en önemlisi eğlenin!
+          </p>
+          <p><em>İyi eğlenceler!</em></p>
+        </div>
+      </section>
+    </main>
 
-  <script src="./assets/js/index.js" defer></script>
-  <script src="./assets/js/footer.js" defer></script>
-</body>
+    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/footer.js" defer></script>
+  </body>
+</html>

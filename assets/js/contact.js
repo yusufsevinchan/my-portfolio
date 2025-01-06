@@ -1,8 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  alert("Herhangi bir düşüncen veya önerin mi var? Formu doldurarak bana iletebilirsin.");
+  alert(
+    "Herhangi bir düşüncen veya önerin mi var? Formu doldurarak bana iletebilirsin."
+  );
+  const locationIframe = document.getElementById("location-iframe");
+  if (locationIframe) {
+    locationIframe.src =
+      "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZfgZpQBZtRQRFZJtOL9blag&key=AIzaSyDPz5n2YW41nc-N36s2eJ8Rf5vobe0OdIo";
+  }
   // Get the all checkboxes
-  const likeCheckboxes = document.querySelectorAll('#like-web-pages input[type="checkbox"]');
-  const dislikeCheckboxes = document.querySelectorAll('#dislike-web-pages input[type="checkbox"]');
+  const likeCheckboxes = document.querySelectorAll(
+    '#like-web-pages input[type="checkbox"]'
+  );
+  const dislikeCheckboxes = document.querySelectorAll(
+    '#dislike-web-pages input[type="checkbox"]'
+  );
 
   // Add event listener to each checkbox
   likeCheckboxes.forEach((checkbox) => {
@@ -31,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
   // Add event listener to the form
   const range = document.getElementById("range");
   const rangeValue = document.getElementById("rangeValue");
