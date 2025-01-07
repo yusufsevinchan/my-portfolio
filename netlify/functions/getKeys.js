@@ -2,17 +2,14 @@ export const handler = async (event) => {
   // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
   const allowedOrigins = [
     "chrome-extension://dpnppkohaamjanddepocpipmjmlmobbp",
+    "chrome-extension://bheigodibhkolegjfocchbndmniaofog",
     "moz-extension://a6a6cbb7-d4fe-4a97-98f8-3dba534db98e",
   ];
   const origin = event.headers.origin;
 
   // OPTIONS request ise CORS kontrolü yapma
   if (event.httpMethod === "OPTIONS") {
-    if (
-      allowedOrigins.includes(origin) ||
-      allowedOrigins.includes("chrome-extension://") ||
-      allowedOrigins.includes("moz-extension://")
-    ) {
+    if (allowedOrigins.includes(origin)) {
       return {
         statusCode: 200,
         headers: {
@@ -29,11 +26,6 @@ export const handler = async (event) => {
   if (!allowedOrigins.includes(origin)) {
     return {
       statusCode: 403,
-      headers: {
-        "Access-Control-Allow-Origin": origin,
-        "Access-Control-Allow-Methods": "GET, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
       body: JSON.stringify({
         error: "Erişim engellendi: Origin izinli değil.",
       }),
