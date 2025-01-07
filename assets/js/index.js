@@ -45,8 +45,25 @@ function openFullscreen() {
 
 // Eğer oyunu oyna butonuna tıklanırsa oyunu yükler
 function loadGame() {
+  // Eğer cihaz mobil ise, oyunu yükleme
+  const isComputer = checkDevice();
+  if (!isComputer) {
+    gameContainer.innerHTML =
+      "<h2>Bu oyun sadece bilgisayarlar için desteklenmektedir.</h2>";
+    return;
+  }
   gameFrame.src = "https://scratch.mit.edu/projects/1027995806/embed";
   gameFrame.onerror = showError;
+}
+
+// Cihazın bilgisayar olup olmadığını kontrol eder
+function checkDevice() {
+  const userAgent = navigator.userAgent; // Kullanıcının tarayıcı bilgisi
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      userAgent
+    );
+  return !isMobile;
 }
 
 // Oyun yüklenirken hata oluşursa hata mesajını gösterir
