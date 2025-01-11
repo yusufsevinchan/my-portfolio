@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+background: linear-gradient(180deg, #6a0dad 0%, #1e90ff 100%);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
