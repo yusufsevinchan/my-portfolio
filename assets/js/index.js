@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   playButton.addEventListener("click", loadGame);
   fullscreenButton.addEventListener("click", openFullscreen);
+
+  gameFrame.onerror = showError;
 });
 
 // Tam ekran modunu açar ve kapatır
@@ -52,8 +54,9 @@ function loadGame() {
       "<h2>Bu oyun sadece bilgisayarlar için desteklenmektedir.</h2>";
     return;
   }
-  gameFrame.src = "https://scratch.mit.edu/projects/1027995806/embed";
-  gameFrame.onerror = showError;
+  const gameEmbedSource = "https://scratch.mit.edu/projects/1027995806/embed";
+  if (gameFrame.src === gameEmbedSource) return;
+  gameFrame.src = gameEmbedSource;
 }
 
 // Cihazın bilgisayar olup olmadığını kontrol eder
