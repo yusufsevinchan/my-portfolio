@@ -1,97 +1,172 @@
 body {
-    background-color: darkturquoise;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 20px;
+  background: linear-gradient(
+    60deg,
+    #1e3a8a,
+    #2563eb,
+    #4f46e5,
+    #3b82f6,
+    #1d4ed8,
+    #4338ca,
+    #312e81
+  );
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px;
 }
 
 header {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-h3 {
-    margin-top: 10px;
+  text-align: center;
+  font-size: 1.2em;
 }
 
 p {
-    font-size: large;
-    text-align: justify;
+  font-size: 1.3em;
+  text-align: left;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    text-align: center;
-    font-size: large;
-    color: black;
-    padding: 10px;
-    border: 1px solid black;
+  text-align: left;
+  font-size: large;
+  color: black;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 th {
-    background-color: lightgreen;
-    font-size: large;
+  background-color: lightgreen;
+  font-size: large;
 }
 
 tr {
-    background-color: lightskyblue;
+  background-color: lightskyblue;
 }
 
 tr:hover {
-    background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 /* Classes */
 .profile {
-    /* Sağ üstte sabit konum */
-    position: fixed;
-    top: 20px;
-    right: 20px;
+  /* Sağ üstte sabit konum */
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px double skyblue;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px double skyblue;
 }
 
 .programming-languages li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 10px;
+  list-style-type: none;
+  display: inline-block;
+  margin: 10px;
 }
 
 .programming-languages li img {
-    width: 90px;
-    height: 90px;
+  width: 90px;
+  height: 90px;
 }
 
 .hobbies {
-    list-style-type: square;
-    font-size: large;
+  list-style-type: square;
+  font-size: large;
 }
 
 .social-links {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .social-links a {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: alias;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: alias;
 }
 
 .social-links i {
-    font-size: 50px;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+    font-size: 0.9em;
+  }
+
+  header {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+    padding: 0 5px;
+  }
+
+  table {
+    font-size: 0.8em;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  /* Classes */
+  .profile {
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+
+  .programming-languages li {
+    margin: 5px;
+  }
+
+  .programming-languages li img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hobbies {
+    font-size: medium;
+    margin: 5px;
+  }
+
+  .social-links {
     margin-bottom: 20px;
+  }
+
+  .social-links div {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .social-links a {
+    font-size: 1em;
+  }
+
+  .social-links i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
 }

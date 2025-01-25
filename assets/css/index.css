@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Trebuchet+MS:wght@400;700&display=swap');
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   background-image: url("../img/background.gif");
   background-repeat: no-repeat;
@@ -12,57 +13,19 @@ body {
 
 header {
   font-family: "Trebuchet MS", sans-serif;
-  font-size: x-large;
   text-align: center;
+  font-size: 1.2em;
   margin-bottom: 20px;
 }
 
 .hero-section {
-  background-color: rgba(255, 255, 255, 0.15);
-  font-family: cursive;
-  font-size: 120%;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-size: 1.2em;
   text-align: center;
   text-shadow: 2px 2px 4px black;
   border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-}
-
-/* Navigation */
-nav {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  margin: 40px;
-  border-radius: 115px;
-}
-
-nav ol {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0;
-  margin: 0;
-}
-
-nav ol li {
-  background-color: darkslateblue;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 10px;
-  cursor: pointer;
-  transition: background-color 0.5s;
-}
-
-nav ol li:hover {
-  background-color: dodgerblue;
-}
-
-nav ol a {
-  text-decoration: none;
-  color: white;
-  font-size: x-large;
-  font-weight: bold;
+  padding: 10px;
+  margin: 50px;
 }
 
 /* Game Section */
@@ -73,16 +36,15 @@ nav ol a {
   border-radius: 10px;
 }
 
-.game-section h1 {
+.game-section h2 {
   text-align: center;
-  font-size: xx-large;
   color: blueviolet;
   margin-top: 0;
 }
 
 .game-section button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 15px 20px;
+  margin: 15px 80px;
   background-color: lightseagreen;
   color: white;
   border: none;
@@ -109,7 +71,54 @@ nav ol a {
 }
 
 .game-instructions {
-  font-size: large;
+  font-size: medium;
   color: black;
   margin-top: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  header {
+    font-size: large;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  .hero-section {
+    font-size: 100%;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+
+  .game-section {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .game-section h1 {
+    font-size: large;
+    margin-top: 0;
+  }
+
+  .game-section button {
+    padding: 8px 15px;
+    font-size: medium;
+    margin: 5px;
+  }
+
+  #game-container {
+    padding: 10px;
+  }
+
+  #game-frame {
+    height: 60vh;
+    border-radius: 8px;
+  }
+
+  .game-instructions {
+    font-size: medium;
+    margin-top: 15px;
+  }
 }
