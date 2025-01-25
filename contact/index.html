@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yusuf Sevinçhan iletişim sayfası. Bana mesaj veya geri bildirim gönderin.">
     <title>İletişim</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/contact.css">
+    <!-- Scripts -->
+    <base href="/">
+    <script src="../assets/js/contact.js" defer></script>
+    <script src="./components/navigation/navigation.js" defer></script>
+    <script src="./components/footer/footer.js" defer></script>
 </head>
 
 <body>
@@ -15,36 +21,37 @@
     </header>
     <main>
         <section class="contact-info">
-            <p><b>Mail:</b>
-                <a href="mailto:yusuf.sevinchan.dev@gmail.com">
-                    yusuf.sevinchan.dev@gmail.com
-                </a>
-            </p>
-            <p><b>Linkedin:</b>
-                <a href="https://www.linkedin.com/in/yusuf-sevinchan" target="_blank">
-                    Yusuf Sevinçhan
-                </a>
+            <h2>Mail & Linkedin Profilim</h2>
+                <p><b>Mail:</b>
+                    <a href="mailto:yusuf.sevinchan.dev@gmail.com">
+                        yusuf.sevinchan.dev@gmail.com
+                    </a>
+                </p>
+                <p><b>Linkedin:</b>
+                    <a href="https://www.linkedin.com/in/yusuf-sevinchan" target="_blank">
+                        Yusuf Sevinçhan
+                    </a>
         </section>
         <section id="suggestion-section">
             <!-- İletişim Formu -->
             <form name="contact" method="POST" class="contact-form" data-netlify="true">
-                <h2>Bana iletmek istediğiniz nedir:</h2>
+                <h2>Bana iletmek istediğiniz nedir</h2>
                 <input type="text" name="name" id="name" placeholder="Adınız" required>
                 <input type="email" name="email" id="email" placeholder="E-posta Adresiniz" required>
-                <textarea name="message" id="message" rows="13" placeholder="Mesajınız" required></textarea>
+                <textarea name="message" id="message" rows="15" placeholder="Mesajınız" required></textarea>
                 <button type="submit">Gönder</button>
                 <button type="reset">Temizle</button>
             </form>
 
             <!-- Geri Bildirim Formu -->
             <form name="feedback" method="POST" class="feedback-form" data-netlify="true">
-                <h2>Geri bildirim Formu</h2>
+                <h2>Geri Bildirimlerinizi Almak İsterim</h2>
                 <div id="range-container" class="range-container">
                     <label for="range">Websiteme 10 üzerinden kaç puan veriyorsunuz:</label><br><br>
                     <input type="range" name="range" id="range" min="0" max="10" step="1" value="5" required><br><br>
                     <div id="rangeValue" class="range-value">5</div>
                 </div>
-                <div id="like-web-pages">
+                <div id="like-checkboxes">
                     <h3>Hangi sayfaları beğendiniz:</h3>
                     <input type="checkbox" name="liked-pages[]" id="home-like" value="home">
                     <label for="home-like">Anasayfa</label>
@@ -58,7 +65,7 @@
                     <label for="contact-like">İletişim</label>
                 </div>
                 <hr>
-                <div id="dislike-web-pages">
+                <div id="dislike-checkboxes">
                     <h3>Hangi sayfaları beğenmediniz:</h3>
                     <input type="checkbox" name="disliked-pages[][]" id="home-dislike" value="home">
                     <label for="home-dislike">Anasayfa</label>
@@ -82,7 +89,7 @@
             </form>
         </section>
         <section id="address-section">
-            <div>
+            <div class="address">
                 <p><b>Adres:</b>
                     İstanbul Üniversitesi-Cerrahpaşa Teknik Bilimler Meslek Yüksek Okulu Alkent 2000 Mahallesi Yiğittürk
                     Caddesi No:5/9/1 Büyükçekmece Yerleşkesi KLM Binası Büyükçekmece/İstanbul
@@ -91,14 +98,11 @@
             <section class="location">
                 <h2>Üniversite Konum</h2>
                 <!-- Loading lazy kullanıldığında iframe ögesi sayfa yüklenirken yüklenir. -->
-                <iframe id="location-iframe" loading="lazy"
-                    src="">
+                <iframe id="location-iframe" loading="lazy" src="">
                 </iframe>
             </section>
         </section>
     </main>
-    <script src="../assets/js/contact.js" defer></script>
-    <script src="../assets/js/footer.js" defer></script>
 </body>
 
 </html>

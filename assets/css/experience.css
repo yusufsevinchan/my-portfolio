@@ -1,35 +1,68 @@
 body {
-    background-color: cornflowerblue;
-    font-family: sans-serif;
-    margin: 20px;
+  background-color: cornflowerblue;
+  font-family: Verdana, sans-serif;
+  margin: 20px;
 }
 
 header {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    width: 60%;
-    margin-inline: 20%;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-inline: 30%;
+  font-size: 1.2em;
+  border-radius: 20px;
 }
 
 main {
-    border-radius: 20px;
-    margin-inline: 30px;
-    padding: 10px;
+  border-radius: 20px;
+  margin: 0 30px;
+  padding: 10px;
 }
 
 .job-card {
-    background-color: white;
-    color: #333;
-    text-align: justify;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px 7%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: #333;
+  text-align: justify;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-inline: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .job-card li {
-    list-style-type: circle;
+  list-style-type: circle;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  header {
+    margin-inline: 10%;
+    font-size: 1em;
+    padding: 8px;
+    border-radius: 15px;
+  }
+
+  main {
+    margin: 0;
+    padding: 8px;
+  }
+
+  .job-card {
+    margin-inline: 10px;
+    padding: 15px;
+    font-size: 0.9em;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .job-card li {
+    font-size: 0.9em;
+  }
 }

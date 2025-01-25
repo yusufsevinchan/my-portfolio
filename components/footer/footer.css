@@ -1,0 +1,65 @@
+footer {
+  background-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  border: 3px double white;
+  padding: 10px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-nav {
+  font-size: 1.2em;
+}
+
+.footer-nav a:not(:last-child)::after {
+  content: "\\|/";
+  color: white;
+  margin: 0 10px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: red;
+  cursor: alias;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  color: lightseagreen;
+}
+
+.copyright {
+  color: azure;
+  font-weight: bold;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  footer {
+    border-width: 2px;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .footer-nav {
+    font-size: 1em;
+  }
+
+  .footer-nav a:not(:last-child)::after {
+    margin: 0 5px;
+    content: "|";
+  }
+
+  .footer-nav a {
+    font-size: 0.9em;
+    margin: 0 5px;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
