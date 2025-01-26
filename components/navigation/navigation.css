@@ -21,7 +21,7 @@ nav ol li {
   padding: 15px;
   margin: 10px;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s ease;
 }
 
 nav ol li:hover {
@@ -31,8 +31,8 @@ nav ol li:hover {
 nav ol a {
   text-decoration: none;
   color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: large;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -51,7 +51,7 @@ nav ol a {
   }
 
   nav ol a {
-    font-size: medium;
+    font-size: 1.2em;
     text-align: center;
   }
 }

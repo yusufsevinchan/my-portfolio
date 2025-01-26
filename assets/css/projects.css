@@ -87,7 +87,7 @@ section h2 {
 
   header {
     margin-inline: 10%;
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 8px;
     border-radius: 15px;
   }
@@ -105,30 +105,25 @@ section h2 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }
 
+  section h2 {
+    font-size: 1.2em;
+  }
+
   .project-box {
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 12px;
-    font-size: 0.9em;
+    font-size: 1.15em;
     text-align: justify;
   }
 
-  section h2 {
-    font-size: 1em;
-  }
-
-  .project-box p {
-    font-size: 0.9em;
-    text-align: left;
-  }
-
   .project-box ul {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-left: 20px;
   }
 
   .project-box a {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .project-box-image-container {

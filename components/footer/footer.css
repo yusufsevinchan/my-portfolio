@@ -35,31 +35,45 @@ footer {
   font-weight: bold;
 }
 
-/* Mobile Styles */
+/* Tablet Styles */
 @media (max-width: 768px) {
   footer {
     border-width: 2px;
     padding: 8px;
+  }
+
+  .footer-nav {
+    font-size: 1.1em;
+  }
+
+  .footer-nav a:not(:last-child)::after {
+    margin: 0 5px;
+    content: " |";
+  }
+
+  .footer-nav a {
+    margin: 0 5px;
+  }
+
+  .copyright {
     font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  footer {
+    border-width: 1px;
+    padding: 5px;
   }
 
   .footer-nav {
     font-size: 1em;
   }
 
-  .footer-nav a:not(:last-child)::after {
-    margin: 0 5px;
-    content: "|";
-  }
-
-  .footer-nav a {
-    font-size: 0.9em;
-    margin: 0 5px;
-  }
-
   .copyright {
     font-size: 0.8em;
-    text-align: center;
-    margin-top: 10px;
   }
 }
