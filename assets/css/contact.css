@@ -213,7 +213,7 @@ form button:hover {
   }
 
   .location {
-    margin-inline: 20px;
+    margin-inline: 10px;
     padding: 0 5px 5px 5px;
   }
 
@@ -223,6 +223,6 @@ form button:hover {
   }
 
   .location iframe {
-    height: 300px;
+    height: 350px;
   }
 }

@@ -33,6 +33,7 @@ main {
 }
 
 .job-card li {
+  font-size: 1.1em;
   list-style-type: circle;
 }
 
@@ -43,7 +44,7 @@ main {
 
   header {
     margin-inline: 10%;
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 8px;
     border-radius: 15px;
   }
@@ -56,13 +57,13 @@ main {
   .job-card {
     margin-inline: 10px;
     padding: 15px;
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: left;
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }
 
   .job-card li {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }

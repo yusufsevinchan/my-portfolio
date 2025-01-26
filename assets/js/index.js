@@ -72,5 +72,7 @@ function checkDevice() {
 // Oyun yüklenirken hata oluşursa hata mesajını gösterir
 function showError() {
   gameFrame.style.display = "none";
-  gameContainer.innerHTML = "<h1>Oops! Something went wrong.</h1>";
+  const errorMessage = document.createElement("h3");
+  errorMessage.innerHTML = "Oops! Something went wrong.";
+  gameContainer.appendChild(errorMessage);
 }
