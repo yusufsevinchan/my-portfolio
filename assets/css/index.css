@@ -18,23 +18,27 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 #background-video {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
   z-index: -1;
   background-size: cover;
+  object-fit: cover;
 }
 
 header {
   font-family: "Trebuchet MS", sans-serif;
   text-align: center;
-  font-size: 1.4em;
-  margin-bottom: 50px;
+  font-size: 1.8em;
+  margin-top: 50px;
+  margin-bottom: 300px;
 }
 
 .hero-section {
@@ -63,9 +67,10 @@ header {
 }
 
 .game-section button {
+  width: 200px;
   padding: 15px 20px;
-  margin: 15px 80px;
-  background-color: #16a085;
+  margin: 10px;
+  background: linear-gradient(0deg, blue, blueviolet);
   color: white;
   border: none;
   cursor: pointer;
@@ -75,7 +80,9 @@ header {
 }
 
 .game-section button:hover {
-  background-color: #1abc9c;
+  background: linear-gradient(360deg, blueviolet, blue);
+  color: white;
+  transition: background-color 0.5s;
 }
 
 #game-container {
@@ -86,6 +93,7 @@ header {
 #game-frame {
   width: 100%;
   height: 80vh;
+  margin-top: 20px;
   border: none;
   border-radius: 10px;
 }
