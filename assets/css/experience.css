@@ -8,7 +8,7 @@ header {
   text-align: center;
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 5px;
   margin-inline: 30%;
   font-size: 1.2em;
   border-radius: 20px;
@@ -30,6 +30,11 @@ main {
   margin-bottom: 40px;
   margin-inline: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.job-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .job-card li {
@@ -61,6 +66,11 @@ main {
     text-align: left;
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .job-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
   }
 
   .job-card li {

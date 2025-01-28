@@ -1,3 +1,4 @@
+
 footer {
   background-color: transparent;
   font-family: "Courier New", Courier, monospace;
@@ -7,6 +8,10 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
+
+  /* Custom Properties */
+  --text-color: red;
+  --hover-color: lightseagreen;
 }
 
 .footer-nav {
@@ -21,13 +26,13 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  color: red;
+  color: var(--text-color);
   cursor: alias;
   font-weight: bold;
 }
 
 .footer-nav a:hover {
-  color: lightseagreen;
+  color: var(--hover-color);
 }
 
 .copyright {
@@ -38,42 +43,61 @@ footer {
 /* Tablet Styles */
 @media (max-width: 768px) {
   footer {
-    border-width: 2px;
-    padding: 8px;
+      border-width: 2px;
+      padding: 8px;
   }
 
   .footer-nav {
-    font-size: 1.1em;
+      font-size: 1.1em;
   }
 
   .footer-nav a:not(:last-child)::after {
-    margin: 0 5px;
-    content: " |";
+      margin: 0 5px;
+      content: " |";
   }
 
   .footer-nav a {
-    margin: 0 5px;
+      margin: 0 5px;
+  }
+
+  .footer-nav a:hover {
+      /* dont change hover color on tablet */
+      color: var(--text-color);
   }
 
   .copyright {
-    font-size: 0.9em;
-    text-align: center;
-    margin-top: 10px;
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: 10px;
   }
 }
 
 /* Mobile Styles */
 @media (max-width: 480px) {
   footer {
-    border-width: 1px;
-    padding: 5px;
+      border-width: 1px;
+      padding: 5px;
   }
 
   .footer-nav {
-    font-size: 1em;
+      font-size: 1em;
+  }
+
+  .footer-nav a:not(:last-child)::after {
+      margin: 0 3px;
+      content: " |";
+  }
+
+  .footer-nav a {
+      margin: 0 3px;
+  }
+
+  .footer-nav a:hover {
+      /* dont change hover color on mobile */
+      color: var(--text-color);
   }
 
   .copyright {
-    font-size: 0.8em;
+      font-size: 0.8em;
   }
 }
