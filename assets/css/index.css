@@ -1,4 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Trebuchet+MS:wght@400;700&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-woff2/Montserrat-Regular.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat/Montserrat-woff/Montserrat-Regular.woff")
+      format("woff"),
+    url("../fonts/Montserrat/Montserrat-ttf/Montserrat.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -22,15 +33,16 @@ body {
 header {
   font-family: "Trebuchet MS", sans-serif;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-bottom: 50px;
 }
 
 .hero-section {
-  background-color: rgba(255, 255, 255, 0.25);
-  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 1.15em;
+  font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 10px;
   margin: 50px;
@@ -38,7 +50,7 @@ header {
 
 /* Game Section */
 .game-section {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   margin: 50px;
   padding: 20px;
   border-radius: 10px;
@@ -53,7 +65,7 @@ header {
 .game-section button {
   padding: 15px 20px;
   margin: 15px 80px;
-  background-color: lightseagreen;
+  background-color: #16a085;
   color: white;
   border: none;
   cursor: pointer;
@@ -63,7 +75,7 @@ header {
 }
 
 .game-section button:hover {
-  background-color: lightskyblue;
+  background-color: #1abc9c;
 }
 
 #game-container {
@@ -93,9 +105,9 @@ header {
   }
 
   .hero-section {
-    font-size: 100%;
-    padding: 15px;
-    margin: 10px;
+    font-size: 0.9em;
+    padding: 20px 10px;
+    margin: 20px;
     border-radius: 8px;
   }
 

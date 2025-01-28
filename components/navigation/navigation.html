@@ -1,32 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation</title>
-    <link rel="stylesheet" href="/components/navigation/navigation.css">
+    <style>
+        nav {
+            background: rgba(255, 255, 255, 0.6);
+            margin: 20px;
+            padding: 10px;
+            border-radius: 80px;
+        }
+
+        #nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px;
+            margin: 30px;
+            padding: 10px;
+        }
+
+        .nav-link {
+            background-color: darkmagenta;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 15px;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: dodgerblue;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                margin: 10px 20px;
+                padding: 8px;
+                border-radius: 60px;
+            }
+
+            #nav-menu {
+                flex-direction: column;
+                margin: 18px;
+                padding: 15px;
+            }
+
+            .nav-link {
+                padding: 15px;
+                margin: 8px 0;
+                font-size: 1em;
+                text-align: center;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <ol>
-            <a href="../index.html">
-                <li>Ana Sayfa</li>
-            </a>
-            <a href="../about/index.html">
-                <li>Hakkımda</li>
-            </a>
-            <a href="../experience/index.html">
-                <li>İş Deneyimi</li>
-            </a>
-            <a href="../projects/index.html">
-                <li>Projelerim</li>
-            </a>
-            <a href="../contact/index.html">
-                <li>İletişim</li>
-            </a>
-        </ol>
+    <nav aria-label="Ana Navigasyon">
+        <div id="nav-menu" role="navigation">
+            <a class="nav-link" href="../index.html" role="button">Ana Sayfa</a>
+            <a class="nav-link" href="../about/index.html" role="button">Hakkımda</a>
+            <a class="nav-link" href="../experience/index.html" role="button">İş Deneyimi</a>
+            <a class="nav-link" href="../projects/index.html" role="button">Projeler</a>
+            <a class="nav-link" href="../contact/index.html" role="button">İletişim</a>
+        </div>
     </nav>
 </body>
 

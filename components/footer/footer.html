@@ -6,6 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
     <link rel="stylesheet" href="/components/footer/footer.css">
+    <!-- Footer CSS inlined for performance optimization -->
+    <style>
+        footer {
+            background-color: transparent;
+            font-family: "Courier New", Courier, monospace;
+            text-align: center;
+            border: 3px double white;
+            padding: 10px;
+            position: relative;
+            left: 0;
+            bottom: 0;
+
+            /* Custom Properties */
+            --text-color: red;
+            --hover-color: lightseagreen;
+        }
+
+        .footer-nav {
+            font-size: 1.2em;
+        }
+
+        .footer-nav a:not(:last-child)::after {
+            content: "\\|/";
+            color: white;
+            margin: 0 10px;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            cursor: alias;
+            font-weight: bold;
+        }
+
+        .footer-nav a:hover {
+            color: var(--hover-color);
+        }
+
+        .copyright {
+            color: azure;
+            font-weight: bold;
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 768px) {
+            footer {
+                border-width: 2px;
+                padding: 8px;
+            }
+
+            .footer-nav {
+                font-size: 1.1em;
+            }
+
+            .footer-nav a:not(:last-child)::after {
+                margin: 0 5px;
+                content: " |";
+            }
+
+            .footer-nav a {
+                margin: 0 5px;
+            }
+
+            .footer-nav a:hover {
+                /* dont change hover color on tablet */
+                color: var(--text-color);
+            }
+
+            .copyright {
+                font-size: 0.9em;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 480px) {
+            footer {
+                border-width: 1px;
+                padding: 5px;
+            }
+
+            .footer-nav {
+                font-size: 1em;
+            }
+
+            .footer-nav a:not(:last-child)::after {
+                margin: 0 3px;
+                content: " |";
+            }
+
+            .footer-nav a {
+                margin: 0 3px;
+            }
+
+            .footer-nav a:hover {
+                /* dont change hover color on mobile */
+                color: var(--text-color);
+            }
+
+            .copyright {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +119,7 @@
             <a href="../index.html">Ana Sayfa</a>
             <a href="../about/index.html">Hakkımda</a>
             <a href="../experience/index.html">İş Deneyimi</a>
-            <a href="../projects/index.html">Projelerim</a>
+            <a href="../projects/index.html">Projeler</a>
             <a href="../contact/index.html">İletişim</a>
         </div>
         <div class="copyright">

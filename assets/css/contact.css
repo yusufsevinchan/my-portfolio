@@ -25,12 +25,12 @@ header {
 }
 
 .contact-info a {
-  color: teal;
+  color: darkcyan;
   cursor: alias;
 }
 
 .contact-info a:hover {
-  color: tomato;
+  color: darkslategray;
 }
 
 #suggestion-section {

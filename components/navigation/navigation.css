@@ -1,6 +1,6 @@
 /* Navigation */
 nav {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 10px;
   margin: 20px;
   border-radius: 80px;
@@ -28,7 +28,7 @@ nav ol li:hover {
   background-color: dodgerblue;
 }
 
-nav ol a {
+nav ol li a {
   text-decoration: none;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -50,8 +50,8 @@ nav ol a {
     border-radius: 8px;
   }
 
-  nav ol a {
-    font-size: 1.2em;
+  nav ol li a {
+    font-size: 1em;
     text-align: center;
   }
 }

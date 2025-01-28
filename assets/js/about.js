@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Hide profile photo when scrolled down on mobile devices
   hideProfileOnScroll();
-  // 
 });
 
 function hideProfileOnScroll() {
@@ -15,7 +14,7 @@ function hideProfileOnScroll() {
       const distanceFromTop = window.scrollY;
 
       // Hide the profile photo when scrolled down
-      if (distanceFromTop > 200) {
+      if (distanceFromTop > 50) {
         // Change 100 based on your needs
         profile.style.opacity = 0; // Hide
       } else {
