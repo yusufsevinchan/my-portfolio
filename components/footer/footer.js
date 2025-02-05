@@ -9,16 +9,19 @@ async function init() {
 }
 
 async function loadFooterContent() {
-  const cachedHtml = localStorage.getItem("footerHtml");
-  if (cachedHtml) {
-    renderFooter(cachedHtml);
-  } else {
-    let html = await fetchFooterContent();
-    if (html) {
-      localStorage.setItem("footerHtml", html);
-      renderFooter(html);
-    }
-  }
+  // const cachedHtml = localStorage.getItem("footerHtml");
+  // if (cachedHtml) {
+  //   renderFooter(cachedHtml);
+  // } else {
+  //   let html = await fetchFooterContent();
+  //   if (html) {
+  //     localStorage.setItem("footerHtml", html);
+  //     renderFooter(html);
+  //   }
+  // }
+
+  let html = await fetchFooterContent();
+  renderFooter(html);
 }
 
 function renderFooter(html) {

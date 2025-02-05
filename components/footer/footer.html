@@ -9,39 +9,44 @@
     <meta name="author" content="Yusuf Sevinçhan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
-    <link rel="stylesheet" href="/components/footer/footer.css">
     <!-- Footer CSS inlined for performance optimization -->
     <style>
         footer {
             background-color: transparent;
             font-family: "Courier New", Courier, monospace;
             text-align: center;
-            border: 3px double white;
+            border: 2px solid white;
             padding: 10px;
             position: relative;
             left: 0;
             bottom: 0;
-
-            /* Custom Properties */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             --text-color: red;
             --hover-color: lightseagreen;
         }
 
         .footer-nav {
-            font-size: 1.2em;
-        }
-
-        .footer-nav a:not(:last-child)::after {
-            content: "\\|/";
-            color: white;
-            margin: 0 10px;
+            font-size: 1.4em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
         }
 
         .footer-nav a {
             text-decoration: none;
             color: var(--text-color);
-            cursor: alias;
+            cursor: pointer;
             font-weight: bold;
+            padding: 5px;
+        }
+
+        .footer-nav a:not(:last-child)::after {
+            content: "\\|/ ";
+            color: azure;
+            margin: 0 5px;
         }
 
         .footer-nav a:hover {
@@ -51,41 +56,34 @@
         .copyright {
             color: azure;
             font-weight: bold;
+            margin-top: 10px;
         }
 
-        /* Tablet Styles */
         @media (max-width: 768px) {
             footer {
-                border-width: 2px;
+                border-width: 1.5px;
                 padding: 8px;
             }
 
             .footer-nav {
-                font-size: 1.1em;
-            }
-
-            .footer-nav a:not(:last-child)::after {
-                margin: 0 5px;
-                content: " |";
+                font-size: 1.2em;
+                flex-direction: column;
             }
 
             .footer-nav a {
-                margin: 0 5px;
+                display: block;
+                padding: 4px 0;
             }
 
-            .footer-nav a:hover {
-                /* dont change hover color on tablet */
-                color: var(--text-color);
+            .footer-nav a:not(:last-child)::after {
+                content: "";
             }
 
             .copyright {
                 font-size: 0.9em;
-                text-align: center;
-                margin-top: 10px;
             }
         }
 
-        /* Mobile Styles */
         @media (max-width: 480px) {
             footer {
                 border-width: 1px;
@@ -93,21 +91,18 @@
             }
 
             .footer-nav {
-                font-size: 1em;
-            }
-
-            .footer-nav a:not(:last-child)::after {
-                margin: 0 3px;
-                content: " |";
+                font-size: 1.1em;
+                flex-direction: column;
+                gap: 5px;
             }
 
             .footer-nav a {
-                margin: 0 3px;
+                display: block;
+                padding: 3px 0;
             }
 
-            .footer-nav a:hover {
-                /* dont change hover color on mobile */
-                color: var(--text-color);
+            .footer-nav a:not(:last-child)::after {
+                content: "";
             }
 
             .copyright {
