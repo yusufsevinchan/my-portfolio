@@ -1,9 +1,8 @@
 export const handler = async (event) => {
   // CORS kontrolü ile sadece belirli domainlerin bu fonksiyonu kullanmasına izin ver
   const allowedOrigins = [
-    "chrome-extension://nbhnbfagdliekdglmgagjmdindmddcjg", // test extension
+    "chrome-extension://gcgpnfhacjjppkbdbpicobofgbfnjalj", // test extension
     "chrome-extension://dpnppkohaamjanddepocpipmjmlmobbp", // deployed extension
-    "moz-extension://a6a6cbb7-d4fe-4a97-98f8-3dba534db98e",
   ];
   const origin = event.headers.origin;
 
