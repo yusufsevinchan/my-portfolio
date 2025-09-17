@@ -4,10 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
-  <!--For social media links, Font Awesome 6.0.0-beta3 -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Yusuf Sevinçhan - Hakkımda</title>
+  <meta name="description"
+    content="Yusuf Sevinçhan'ın özgeçmişi, eğitim bilgileri, programlama becerileri, yabancı dil bilgisi, hobileri ve kariyer hedefleri.">
+  <meta name="keywords"
+    content="Yusuf Sevinçhan, özgeçmiş, eğitim, programlama becerileri, yabancı dil, hobiler, kariyer hedefleri">
+  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/about.css" />
+  <!-- Scripts -->
+  <base href="/">
+  <script src="../assets/js/about.js" defer></script>
+  <script src="./components/navigation/navigation.js" defer></script>
+  <script src="./components/footer/footer.js" defer></script>
 </head>
 
 <body>
@@ -16,9 +24,7 @@
   </header>
   <main>
     <div class="profile">
-      <img
-        src="https://media.licdn.com/dms/image/v2/D4D03AQFm_CmxSIUzQA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714816029760?e=1739404800&v=beta&t=q6sMHYJZ9UAvvTGUxBlNmjF8R8lLN9cM70qdrZTNxkQ"
-        alt="profile photo" class="profile-photo">
+      <img src="../assets/img/profile.webp" alt="Yusuf Sevinçhan'ın profil fotoğrafı" class="profile-photo">
     </div>
 
     <section>
@@ -55,8 +61,8 @@
     </section>
 
     <section>
-      <h3>Programlama Dilleri</h3>
-      <ul class="programming-languages">
+      <h3>Programlama Becerileri</h3>
+      <ul class="programming-skills">
         <li>
           <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML logo" title="HTML">
         </li>
@@ -64,10 +70,10 @@
           <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS logo" title="CSS">
         </li>
         <li>
-          <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python logo" title="Python">
+          <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript logo" title="JavaScript">
         </li>
         <li>
-          <img src="https://cdn.worldvectorlogo.com/logos/java-14.svg" alt="Java logo" title="Java">
+          <img src="https://cdn.worldvectorlogo.com/logos/jee-3.svg" alt="Java logo" title="Java">
         </li>
         <li>
           <img src="https://cdn.worldvectorlogo.com/logos/c-1.svg" alt="C logo" title="C">
@@ -76,24 +82,27 @@
           <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="C# logo" title="C#">
         </li>
         <li>
+          <img src="https://cdn.worldvectorlogo.com/logos/microsoft-sql-server-1.svg" alt="Microsoft SQL Server logo"
+            title="Microsoft SQL Server">
+        </li>
+        <li>
           <img src="https://cdn.worldvectorlogo.com/logos/blazor.svg" alt="Blazor logo" title="Blazor">
         </li>
         <li>
-          <img src="https://cdn.worldvectorlogo.com/logos/microsoft-sql-server-1.svg" alt="Microsoft SQL Server logo"
-            title="Microsoft SQL Server">
+          <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python logo" title="Python">
         </li>
       </ul>
     </section>
 
     <section>
       <h3>Yabancı Dil</h3>
-      <p>A2 Seviyesinde İngilizce</p>
+      <p>İngilizce A2 Level</p>
     </section>
     <section>
       <h3>Hobiler</h3>
       <ol class="hobbies">
-        <li>Yürüyüş Yapmak</li>
         <li>Yazılım Geliştirmek</li>
+        <li>Yürüyüş Yapmak</li>
         <li>Kitap Okumak</li>
         <li>Film İzlemek</li>
       </ol>
@@ -110,24 +119,28 @@
     <section class="social-links">
       <h3>Bağlantılar</h3>
       <div>
+        <!-- Güvenlik ve performans için yeni sekmede açılan bağlantılarda rel="noopener noreferrer" kullanılır -->
         <a href="https://github.com/yusufsevinchan" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" style="color: black;"></i> Github
+          <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub logo" title="GitHub">
         </a>
       </div>
       <div>
         <a href="https://www.linkedin.com/in/yusuf-sevinchan/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin" style="color: #0077b5 ;"></i> Linkedin
+          <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn logo" title="LinkedIn">
         </a>
       </div>
-      <div> <!-- Güvenlik ve performans için yeni sekmede açılan bağlantılarda rel="noopener noreferrer" kullanılır -->
+      <div>
+        <a href="https://www.instagram.com/yusuf.sevinchan.13/" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.worldvectorlogo.com/logos/instagram-2016-6.svg" alt="Instagram logo" title="Instagram">
+        </a>
+      </div>
+      <div>
         <a href="mailto:yusuf.sevinchan.dev@gmail.com" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-envelope" style="color: slateblue;"></i> Mail
+          <img src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg" alt="Gmail logo" title="Gmail">
         </a>
       </div>
     </section>
   </main>
-
-  <script src="../assets/js/footer.js" defer></script>
 </body>
 
 </html>

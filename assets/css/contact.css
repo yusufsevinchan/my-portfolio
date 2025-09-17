@@ -1,155 +1,228 @@
 body {
-    background-color: lightsteelblue;
-    font-family: 'Roboto', sans-serif;
-    margin: 20px;
+  background-color: lightsteelblue;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
 }
 
 header {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
 .contact-info {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: large;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  font-size: large;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .contact-info a {
-    color: teal;
-    cursor: alias;
+  color: darkcyan;
+  cursor: alias;
 }
 
 .contact-info a:hover {
-    color: tomato;
+  color: darkslategray;
 }
 
 #suggestion-section {
-    display: flex;
-    justify-content: space-around;
-    border: 4px dotted teal;
-    padding: 20px;
-    border-radius: 10px;
-    margin-inline: 10px;
+  display: flex;
+  justify-content: space-around;
+  border: 4px dotted teal;
+  padding: 20px;
+  border-radius: 10px;
+  margin-inline: 10px;
 }
 
 .contact-form {
-    border-style: solid double groove double;
+  border-style: solid double groove double;
 }
 
 .feedback-form {
-    border-style: groove double solid double;
+  border-style: groove double solid double;
 }
 
 form {
-    border: 5px solid blueviolet;
-    margin: 10px;
-    padding: 30px;
-    border-radius: 30px;
-    width: 500px;
-    height: auto;
+  border: 5px solid blueviolet;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 30px;
+  width: 500px;
+  height: auto;
 }
 
 form label {
-    width: 100%;
-    font-size: medium;
+  width: 100%;
+  font-size: medium;
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    width: 100%;
-    font-size: medium;
-    line-height: 2;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    padding: 5px;
-    border: none;
-    border-radius: 10px;
+  width: 100%;
+  font-size: medium;
+  line-height: 2;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
 }
 
 form input[type="range"] {
-    width: 100%;
-    height: 18px;
-    margin-top: 20px;
+  width: 100%;
+  height: 18px;
+  margin-top: 20px;
 }
 
 form h3 {
-    margin-top:0;
-    margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 form button {
-    background-color: lightblue;
-    font-size: large;
-    margin-top: 10px;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 5px;
+  background-color: lightblue;
+  font-size: large;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
 }
 
 form button:hover {
-    background: lightskyblue;
-}
-
-#address-section {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 8px;
-    width: 100%;
-    margin-bottom: 20px;
+  background: lightskyblue;
 }
 
 .range-container {
-    position: relative;
+  position: relative;
 }
 
 .range-value {
-    position: absolute;
-    top: 22px;
-    transform: translateX(-40%);
-    background-color: lightblue;
-    padding: 8px;
-    border-radius: 8px;
-    white-space: nowrap;
-    font-size: 14px;
-    font-weight: bold;
-    pointer-events: none;
+  position: absolute;
+  top: 22px;
+  transform: translateX(-40%);
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}
+#address-section {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#address-section .address {
+  margin-left: 20px;
+  text-align: center;
 }
 
 .location {
-    text-align: center;
-    margin-inline: 50px;
-    padding: 0 10px 10px 10px;
-    border: 2px black;
-    border-style: dashed dashed none dashed;
+  text-align: center;
+  margin-inline: 50px;
+  padding: 0 10px 10px 10px;
+  border: 2px black;
+  border-style: dashed dashed none dashed;
 }
 
 .location h2 {
-    margin-top: 10px;
-    margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .location iframe {
-    width: 100%;
-    height: 450px;
-    border: none;
-    border-radius: 10px;
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    #suggestion-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 40px;
-    }
+/* Mobile-Specific Styles */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
 
-    form {
-        width: 95%;
-    }
+  header {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    padding: 8px;
+    font-size: medium;
+  }
+
+  #suggestion-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    border-width: 2px;
+  }
+
+  form {
+    width: 100%;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    border-width: 3px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    font-size: small;
+    line-height: 1.8;
+  }
+
+  form input[type="range"] {
+    height: 14px;
+  }
+
+  form button {
+    font-size: medium;
+    padding: 8px 12px;
+  }
+
+  .range-value {
+    font-size: 12px;
+    top: 18px;
+    padding: 6px;
+  }
+
+  #address-section {
+    padding: 8px;
+  }
+
+  #address-section .address {
+    margin-left: 10px;
+    font-size: small;
+  }
+
+  .location {
+    margin-inline: 10px;
+    padding: 0 5px 5px 5px;
+  }
+
+  .location h2 {
+    font-size: medium;
+    margin-bottom: 10px;
+  }
+
+  .location iframe {
+    height: 350px;
+  }
 }
