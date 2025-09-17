@@ -4,15 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Kişisel web sitem. Hakkımda, iş deneyimi, projelerim ve iletişim sayfalarım burada.">
-  <meta name="keywords" content="web geliştirme, yazılım, projeler, iş deneyimi, iletişim">
-  <meta name="author" content="Yusuf Sevinçhan">
-  <title>My WEB Site</title>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; frame-src 'self' https://scratch.mit.edu;">
+  <meta name=" description"
+    content="Kişisel web sitem. Hakkımda, iş deneyimi, projelerim ve iletişim sayfalarım burada." />
+  <meta name="keywords" content="web geliştirme, yazılım, projeler, iş deneyimi, iletişim" />
+  <meta name="author" content="Yusuf Sevinçhan" />
+  <title>Yusuf Sevinçhan - Kişisel Web Sitem</title>
+  <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="preload" href="./assets/fonts/Montserrat/Montserrat-woff2/Montserrat-Regular.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <!-- Scripts -->
+  <script src="./assets/js/index.js" defer></script>
+  <script src="./components/navigation/navigation.js" defer></script>
+  <script src="./components/footer/footer.js" defer></script>
+  <!-- Prefetch Components -->
+  <link rel="prefetch" href="/components/navigation/navigation.html" as="document">
+  <link rel="prefetch" href="/components/footer/footer.html" as="document" crossorigin="anonymous">
 </head>
 
 <body>
+  <video autoplay muted loop id="background-video" class="" width="1920" height="1080">
+    <source src="assets/video/background.webm" type="video/webm" />
+  </video>
   <header>
     <h1>Web siteme Hoşgeldiniz!</h1>
   </header>
@@ -20,59 +35,50 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <h2>Merhaba, Ben Yusuf Sevinçhan</h2>
-      <p><b>Web geliştirme ve yazılım konularında çalışmalar yapıyorum. Bu sitemde hakkımda, iş deneyimim, projelerim ve
-          iletişim bilgilerim bulunmaktadır.</b></p>
+      <p>
+        Web geliştirme ve yazılım konularında çalışmalar yapıyorum. Bu
+        sitemde hakkımda, iş deneyimim, projelerim ve iletişim bilgilerim
+        bulunmaktadır.</b>
+      </p>
     </section>
-    <!-- Navigation -->
-    <nav>
-      <ol>
-        <a href="./pages/about.html">
-          <li>Hakkımda</li>
-        </a>
-        <a href="./pages/experience.html">
-          <li>İş Deneyimi</li>
-        </a>
-        <a href="./pages/projects.html">
-          <li>Projelerim</li>
-        </a>
-        <a href="./pages/contact.html">
-          <li>İletişim</li>
-        </a>
-      </ol>
-    </nav>
     <!-- My Game from scratch -->
     <section class="game-section">
-      <h1>Mouse Escape Oyunu</h1>
+      <h2>Mouse Escape Oyunu</h2>
       <div id="game-container">
-        <div id="game-loader">
-          <h1>Oyun Yükleniyor...</h1>
-        </div>
-        <button onclick="openFullscreen()">
-          Tam Ekran
-        </button>
-        <iframe src="https://scratch.mit.edu/projects/1027995806/embed" allowtransparency="true" scrolling="no"
-          allowfullscreen onload="hideLoader()" onerror="showError()"></iframe>
+        <button id="play-button">Başlat</button>
+        <button id="fullscreen-button">Tam Ekran Yap</button>
+        <iframe id="game-frame" src="./components/game-preview/game-preview.html" allowtransparency="true"
+          scrolling="no" allowfullscreen title="Mouse Escape Oyunu"></iframe>
       </div>
       <div class="game-instructions">
+        <h3>Mouse Escape Nedir?</h3>
+        <p>
+          <strong>Mouse Escape</strong>, kedi tarafından yakalanmadan
+          yiyecekleri toplayarak hayatta kalmaya çalıştığınız heyecan verici
+          bir Scratch oyunudur. Oyunun süresi boyunca, her 10 saniyede bir
+          zorluk seviyesi artar.
+        </p>
         <h3>Nasıl Oynanır?</h3>
         <p>
-          Oyuna başlamak için ekranın üst kısmındaki <strong>"Yeşil Bayrak"</strong> butonuna tıklayın. Oyunu
-          durdurmak için ise
-          <strong>"Kırmızı Bayrak"</strong> butonuna tıklayabilirsiniz.
+          Oyunu başlatmak için ekranın üst kısmındaki
+          <strong>"Yeşil Bayrak"</strong> butonuna tıklayın. Oyunu durdurmak
+          için <strong>"Kırmızı Bayrak"</strong> butonunu kullanabilirsiniz.
         </p>
         <p>
-          <strong>Hedef:</strong> Farenizi yön tuşlarıyla hareket ettirerek yiyecekleri toplayın ve kediden kaçının!
-          Topladığınız her yiyecek, puanınızı artırır. <strong>100 puana ulaşarak</strong> oyunu kazanın.
+          <strong>Hedef:</strong> Klavyenizdeki yön tuşlarını kullanarak
+          farenizi hareket ettirin, yiyecekleri toplayın ve kediden kaçın!
+          Topladığınız her yiyecek puanınızı artırır.
+          <strong>100 puana ulaşarak</strong> oyunu kazanın.
         </p>
         <p>
-          Ancak dikkatli olun! Eğer kediye yakalanırsanız oyun sona erer. Stratejinizi iyi belirleyin, hızlı olun ve
-          en önemlisi eğlenin!
+          Dikkatli olun! Kedinin sizi yakalaması durumunda oyun sona erer.
+          Stratejinizi iyi planlayın, hızlı olun ve en önemlisi eğlenmeyi
+          unutmayın!
         </p>
         <p><em>İyi eğlenceler!</em></p>
       </div>
     </section>
   </main>
-
-  <script src="./assets/js/index.js" defer></script>
-  <script src="./assets/js/footer.js" defer></script>
 </body>
+
+</html>

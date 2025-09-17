@@ -1,0 +1,60 @@
+nav {
+  background: rgba(255, 255, 255, 0.6);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 80px;
+}
+
+#nav-menu {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  margin: 30px 90px;
+  padding: 10px;
+}
+
+.nav-link {
+  background-color: darkmagenta;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: dodgerblue;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin: 10px 20px;
+    padding: 8px;
+    border-radius: 60px;
+  }
+
+  #nav-menu {
+    flex-direction: column;
+    margin: 18px;
+    padding: 15px;
+  }
+
+  .nav-link {
+    padding: 15px;
+    margin: 8px 0;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-link:hover {
+    background-color: darkmagenta;
+  }
+}
